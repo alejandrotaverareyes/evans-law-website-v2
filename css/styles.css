@@ -103,7 +103,7 @@ p{margin:0 0 1rem}
 .hero__ring{position:absolute;left:6%;top:50%;transform:translateY(-50%);width:520px;height:520px;border-radius:50%;
   border:2px solid rgba(201,162,74,.18);z-index:1}
 .hero__ring::after{content:"";position:absolute;inset:38px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,74,.10),transparent 70%)}
-.hero__fig{position:absolute;left:2%;bottom:0;height:84%;z-index:2;filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
+.hero__fig{position:absolute;left:1%;bottom:0;height:90%;z-index:2;filter:drop-shadow(0 10px 30px rgba(0,0,0,.6))}
 .hero .container{position:relative;z-index:3;width:100%;padding-bottom:70px;padding-top:60px}
 .hero__content{margin-left:auto;max-width:640px;text-align:right}
 .hero__city{font-family:var(--head);font-weight:700;text-transform:uppercase;color:var(--gold);
@@ -225,4 +225,120 @@ p{margin:0 0 1rem}
   .topbar .tb-left{display:none}
   .hero__city{font-size:3rem}
   .hero__sub{font-size:1.15rem;letter-spacing:.16em}
+}
+
+/* =========================================================================
+   v2.2 — practice-area restructure, anchored subsection pages, contact map,
+   team grid, hero cohesion. (Appended; overrides earlier rules where needed.)
+   ========================================================================= */
+
+/* ---- Hero: city + practice read as one cohesive headline (mad4justice) ---- */
+.hero__content{max-width:680px}
+.hero__city{font-size:clamp(3.2rem,8vw,5.6rem);line-height:.92;margin:0}
+.hero__sub{font-size:clamp(1.15rem,2.4vw,2rem);letter-spacing:.14em;margin:.25rem 0 0;
+  color:#fff;font-weight:600}
+.hero__tag{margin-top:1rem;margin-bottom:1.4rem}
+
+/* ---- Top-bar social icons: keep them small regardless of inline SVG sizing ---- */
+.topbar .tb-social svg{width:16px!important;height:16px!important;flex:0 0 16px}
+.topbar .tb-social a{line-height:0}
+
+/* ---- Two-column "Practice Areas" mega-dropdown (main + subsections) ---- */
+.dropdown.dd-mega{display:none;flex-direction:row;min-width:520px;padding:6px}
+.has-dropdown:hover .dropdown.dd-mega,.dropdown.dd-mega.open{display:flex}
+.dd-mega .dd-group{flex:1;min-width:230px}
+.dd-mega .dd-head{display:flex;justify-content:space-between;align-items:center;gap:14px;
+  background:var(--navy-2);color:var(--gold-bright);font-weight:700;letter-spacing:.06em;
+  border-bottom:2px solid var(--gold)}
+.dd-mega .dd-head:hover{background:var(--gold);color:var(--ink)}
+.dd-mega .dd-sub a{padding:9px 18px;font-size:.82rem;color:#dbe2ec;border-bottom:1px solid rgba(255,255,255,.05)}
+.dd-mega .dd-sub a:hover{background:var(--gold);color:var(--ink)}
+
+/* ---- Home: two MAIN practice cards, each revealing its subsections on hover ---- */
+.mains-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.main-area{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);
+  background:var(--navy);min-height:300px}
+.main-area__cover{display:block;position:relative;height:100%}
+.main-area__cover img{width:100%;height:100%;min-height:300px;object-fit:cover;
+  filter:brightness(.55) saturate(.9);transition:.25s}
+.main-area:hover .main-area__cover img{filter:brightness(.32) saturate(.9);transform:scale(1.03)}
+.main-area__label{position:absolute;left:0;right:0;bottom:0;padding:26px 26px 22px;
+  background:linear-gradient(transparent,rgba(8,16,28,.85))}
+.main-area__label h3{color:#fff;font-size:1.9rem;letter-spacing:.04em}
+.main-area__label span{font-family:var(--head);text-transform:uppercase;letter-spacing:.12em;
+  font-size:.78rem;color:var(--gold-bright)}
+/* the subsection menu slides up over the card on hover */
+.main-area__menu{position:absolute;inset:0;background:rgba(8,16,28,.94);
+  display:flex;flex-direction:column;justify-content:center;gap:2px;padding:22px 26px;
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:.22s}
+.main-area:hover .main-area__menu,.main-area:focus-within .main-area__menu{opacity:1;visibility:visible;transform:none}
+.main-area__menu .mm-title{font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;
+  color:var(--gold);font-size:.82rem;margin-bottom:.5rem}
+.main-area__menu a{color:#E7EBF1;font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;
+  font-size:.92rem;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.main-area__menu a:hover{color:var(--gold-bright);padding-left:8px}
+.main-area__menu a.mm-all{border:0;margin-top:10px;color:var(--ink);background:var(--gold);
+  text-align:center;padding:11px;border-radius:4px}
+.main-area__menu a.mm-all:hover{background:var(--gold-bright);padding-left:0}
+
+/* ---- Interior subsection layout: sticky sibling sidebar + anchored blocks ---- */
+.pa-layout{display:grid;grid-template-columns:250px 1fr;gap:44px;align-items:start}
+.pa-side{position:sticky;top:84px}
+.pa-side .pa-side-t{font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;
+  color:var(--gold);font-size:.8rem;margin-bottom:.6rem}
+.pa-side a{display:block;padding:10px 14px;color:#cdd5e0;font-family:var(--head);text-transform:uppercase;
+  letter-spacing:.03em;font-size:.82rem;border-left:3px solid transparent;border-radius:0 4px 4px 0}
+.pa-side a:hover{background:var(--navy-2);color:var(--gold-bright);border-left-color:var(--gold)}
+.pa-block{scroll-margin-top:84px;padding:34px 0;border-top:1px solid var(--line)}
+.pa-block:first-child{border-top:0;padding-top:0}
+.pa-block h2{color:#fff;font-size:1.7rem;margin-bottom:.3rem}
+.pa-block .kicker{font-family:var(--head);text-transform:uppercase;letter-spacing:.18em;
+  font-size:.74rem;color:var(--gold);margin-bottom:.5rem}
+.pa-block h3{color:var(--gold-bright);font-size:1.12rem;margin:1.2rem 0 .4rem}
+.pa-block p{color:#cdd5e0}
+.pa-block ul{margin:0 0 1rem 1.2rem;color:#cdd5e0}
+.pa-block li{margin-bottom:.35rem}
+.pa-block .pa-cta{margin-top:1rem}
+
+/* ---- Contact: map + all locations ---- */
+.contact-map{border-radius:10px;overflow:hidden;border:1px solid var(--line);margin-top:8px}
+.contact-map iframe{width:100%;height:430px;border:0;display:block}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.loc-card{background:var(--navy-2);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.loc-card iframe{width:100%;height:150px;border:0;display:block}
+.loc-card .loc-b{padding:16px}
+.loc-card h3{color:#fff;font-size:1.05rem;margin-bottom:.3rem}
+.loc-card .chip{font-size:.64rem;background:var(--gold);color:var(--ink);padding:2px 7px;border-radius:3px;
+  font-family:var(--head);letter-spacing:.05em;vertical-align:middle;margin-left:6px}
+.loc-card p{color:var(--muted);font-size:.86rem;margin:0 0 .4rem}
+
+/* ---- Team grid (3 people) ---- */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.team-card{background:var(--navy-2);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  transition:.16s;text-align:center}
+.team-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.team-card img{width:100%;height:300px;object-fit:cover;object-position:top}
+.team-card .tc-b{padding:20px}
+.team-card h3{color:#fff;font-size:1.22rem}
+.team-card .role{font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;
+  color:var(--gold-bright);font-size:.78rem;margin:.25rem 0 .7rem}
+.team-card p{color:var(--muted);font-size:.9rem}
+
+@media(max-width:900px){
+  .pa-layout{grid-template-columns:1fr;gap:20px}
+  .pa-side{position:static;display:flex;flex-wrap:wrap;gap:6px}
+  .pa-side a{border-left:0;border:1px solid var(--line);border-radius:4px;font-size:.76rem;padding:7px 11px}
+  .team-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .mains-grid{grid-template-columns:1fr}
+  .dropdown.dd-mega{flex-direction:column;min-width:0}
+  /* on touch there is no hover — keep subsection menus visible */
+  .main-area__menu{position:static;opacity:1;visibility:visible;transform:none;background:var(--navy-2)}
+  .main-area__cover img{min-height:180px}
+  .team-grid{grid-template-columns:1fr}
+  /* keep the hero headline inside the viewport on phones */
+  .hero__city{font-size:clamp(2.6rem,13vw,3.4rem)}
+  .hero__sub{font-size:.9rem!important;letter-spacing:.03em!important;white-space:normal;word-break:normal;line-height:1.2}
+  .hero__content{max-width:none;width:100%;padding:0}
 }

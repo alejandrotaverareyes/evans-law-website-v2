@@ -30,17 +30,28 @@
     <li class="active"><a href="index.html">Home</a></li>
     <li><a href="our-firm.html">Our Firm</a></li>
     <li class="has-dropdown"><a href="#" class="caret" onclick="this.parentElement.querySelector('.dropdown').classList.toggle('open');return false;">Practice Areas</a>
-      <div class="dropdown">
-        <a href="bankruptcy.html"><strong>Bankruptcy</strong></a>
-        <a href="bankruptcy.html#chapter-7">Chapter 7</a>
-        <a href="bankruptcy.html#chapter-13">Chapter 13</a>
-        <a href="bankruptcy.html#chapter-11">Chapter 11</a>
-        <a href="bankruptcy.html#business">Business Bankruptcy</a>
-        <a href="family-law.html"><strong>Family Law</strong></a>
-        <a href="family-law.html#divorce">Divorce</a>
-        <a href="family-law.html#custody">Child Custody</a>
-        <a href="family-law.html#support">Child &amp; Spousal Support</a>
-        <a href="family-law.html#restraining">Restraining Orders</a>
+      <div class="dropdown dd-mega">
+        <div class="dd-group"><a class="dd-head" href="bankruptcy.html">Bankruptcy <span>&rarr;</span></a>
+          <div class="dd-sub">
+            <a href="bankruptcy.html#chapter-7">Chapter 7</a>
+            <a href="bankruptcy.html#chapter-13">Chapter 13</a>
+            <a href="bankruptcy.html#chapter-11">Chapter 11</a>
+            <a href="bankruptcy.html#debt-negotiation">Debt Negotiation &amp; Settlement</a>
+            <a href="bankruptcy.html#business-bankruptcy">Business Bankruptcy</a>
+            <a href="bankruptcy.html#taxes">Taxes &amp; Bankruptcy</a>
+            <a href="bankruptcy.html#divorce-bankruptcy">Divorce &amp; Bankruptcy</a>
+            <a href="bankruptcy.html#business-closure">Business Closure &amp; Corporate Chapter 7</a>
+          </div>
+        </div>
+        <div class="dd-group"><a class="dd-head" href="family-law.html">Family Law <span>&rarr;</span></a>
+          <div class="dd-sub">
+            <a href="family-law.html#divorce">Divorce</a>
+            <a href="family-law.html#mediated-agreements">Mediated Agreements</a>
+            <a href="family-law.html#child-custody">Child Custody</a>
+            <a href="family-law.html#child-support">Child Support</a>
+            <a href="family-law.html#prenuptial">Prenuptial &amp; Post-Nuptial Agreements</a>
+          </div>
+        </div>
       </div>
     </li>
     <li><a href="index.html#testimonials">Testimonials</a></li>
@@ -110,43 +121,75 @@
   </div>
 </section>
 
-<!-- ===== PRACTICE AREAS (heading left, cards right) ===== -->
+<!-- ===== PRACTICE AREAS (two main areas; subsections reveal on hover) ===== -->
 <section class="section areas" id="practice">
-  <div class="container areas-split">
-    <div class="areas-head">
-      <p class="eyebrow">Practice Areas</p>
-      <h2>The areas we handle</h2>
-      <p class="lead" style="color:var(--muted);font-size:1rem">Bankruptcy and family law for people across Northern California. Click an area to learn more.</p>
-      <div class="btn-row"><a class="btn btn--gold" href="bankruptcy.html">View All Practice Areas</a></div>
-    </div>
-    <div class="areas-grid">
-      <a class="area" href="bankruptcy.html#chapter-7"><img src="assets/pa/chapter-7.jpg" alt="Chapter 7 bankruptcy" loading="lazy"><div class="area-b"><h3>Chapter 7</h3><p>Wipe out qualifying debt and get a clean financial slate.</p></div></a>
-      <a class="area" href="bankruptcy.html#chapter-13"><img src="assets/pa/chapter-13.jpg" alt="Chapter 13 bankruptcy" loading="lazy"><div class="area-b"><h3>Chapter 13</h3><p>Reorganize debt into a manageable repayment plan.</p></div></a>
-      <a class="area" href="bankruptcy.html#chapter-11"><img src="assets/pa/chapter-11.jpg" alt="Chapter 11 bankruptcy" loading="lazy"><div class="area-b"><h3>Chapter 11</h3><p>Reorganize and keep a business operating.</p></div></a>
-      <a class="area" href="family-law.html#divorce"><img src="assets/pa/divorce.jpg" alt="Divorce" loading="lazy"><div class="area-b"><h3>Divorce</h3><p>Guidance through dissolution and next steps.</p></div></a>
-      <a class="area" href="family-law.html#custody"><img src="assets/pa/custody.jpg" alt="Child custody" loading="lazy"><div class="area-b"><h3>Child Custody</h3><p>Protecting your relationship with your children.</p></div></a>
-      <a class="area" href="family-law.html#support"><img src="assets/pa/support.jpg" alt="Child and spousal support" loading="lazy"><div class="area-b"><h3>Child &amp; Spousal Support</h3><p>Fair support orders and modifications.</p></div></a>
-      <a class="area" href="family-law.html#restraining"><img src="assets/pa/restraining.jpg" alt="Restraining orders" loading="lazy"><div class="area-b"><h3>Restraining Orders</h3><p>Urgent protection when you need it most.</p></div></a>
-      <a class="area" href="bankruptcy.html#business"><img src="assets/pa/business.jpg" alt="Business bankruptcy" loading="lazy"><div class="area-b"><h3>Business Bankruptcy</h3><p>Guidance for businesses facing insolvency or closure.</p></div></a>
-      <a class="area area-viewall" href="bankruptcy.html">View All Practice Areas<span class="arr">→</span></a>
+  <div class="container">
+    <p class="eyebrow">Practice Areas</p>
+    <h2 style="color:#fff">Two practices. One firm in your corner.</h2>
+    <p class="lead" style="color:var(--muted);margin-bottom:26px">We focus on bankruptcy and family law for people across Northern California. <strong>Hover an area</strong> to jump to a specific topic, or <strong>click it</strong> to open the full practice page.</p>
+    <div class="mains-grid">
+
+      <!-- BANKRUPTCY (main) -->
+      <div class="main-area">
+        <a class="main-area__cover" href="bankruptcy.html">
+          <img src="assets/pa/chapter-7.jpg" alt="Bankruptcy" loading="lazy">
+          <div class="main-area__label"><h3>Bankruptcy</h3><span>Chapter 7 · 13 · 11 · Debt · Business · Tax</span></div>
+        </a>
+        <div class="main-area__menu">
+          <div class="mm-title">Bankruptcy topics</div>
+          <a href="bankruptcy.html#chapter-7">Chapter 7</a>
+          <a href="bankruptcy.html#chapter-13">Chapter 13</a>
+          <a href="bankruptcy.html#chapter-11">Chapter 11</a>
+          <a href="bankruptcy.html#debt-negotiation">Debt Negotiation &amp; Settlement</a>
+          <a href="bankruptcy.html#business-bankruptcy">Business Bankruptcy</a>
+          <a href="bankruptcy.html#taxes">Taxes &amp; Bankruptcy</a>
+          <a class="mm-all" href="bankruptcy.html">All Bankruptcy Services →</a>
+        </div>
+      </div>
+
+      <!-- FAMILY LAW (main) -->
+      <div class="main-area">
+        <a class="main-area__cover" href="family-law.html">
+          <img src="assets/pa/divorce.jpg" alt="Family Law" loading="lazy">
+          <div class="main-area__label"><h3>Family Law</h3><span>Divorce · Custody · Support · Prenuptial</span></div>
+        </a>
+        <div class="main-area__menu">
+          <div class="mm-title">Family law topics</div>
+          <a href="family-law.html#divorce">Divorce</a>
+          <a href="family-law.html#mediated-agreements">Mediated Agreements</a>
+          <a href="family-law.html#child-custody">Child Custody</a>
+          <a href="family-law.html#child-support">Child Support</a>
+          <a href="family-law.html#prenuptial">Prenuptial &amp; Post-Nuptial Agreements</a>
+          <a class="mm-all" href="family-law.html">All Family Law Services →</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== MEET THE ATTORNEY ===== -->
+<!-- ===== MEET THE TEAM (three people) ===== -->
 <section class="section band-light">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Meet the Attorney</p>
-      <h2>Brette L. Evans</h2>
-      <p style="font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dark);font-weight:600">Partner · Bankruptcy &amp; Family Law</p>
-      <p>Brette L. Evans brings over 25 years of ongoing, uninterrupted legal experience, with a primary
-         focus on bankruptcy and family law. She works directly with clients, experts, families, and
-         businesses to navigate legal hurdles — and pushes the limits of the law for the best possible
-         outcome. J.D., UC Hastings College of the Law.</p>
-      <div class="btn-row"><a class="btn btn--gold" href="team/brette-l-evans.html">Read Full Bio</a></div>
+  <div class="container center">
+    <p class="eyebrow">Meet the Team</p>
+    <h2>The people in your corner</h2>
+    <p class="lead">Two partners and a senior paralegal who handle your case personally — from first call to fresh start.</p>
+  </div>
+  <div class="container">
+    <div class="team-grid">
+      <div class="team-card"><img src="assets/attorney-brette.jpg" alt="Brette L. Evans">
+        <div class="tc-b"><h3>Brette L. Evans</h3><p class="role">Partner · Bankruptcy &amp; Family Law</p>
+        <p>Over 25 years of ongoing legal experience. Works directly with clients, families, and businesses to push the limits of the law for the best outcome.</p>
+        <div class="btn-row center" style="margin-top:14px"><a class="btn btn--gold" href="team/brette-l-evans.html">Read Full Bio</a></div></div></div>
+      <div class="team-card"><img src="assets/attorney-kelly.jpg" alt="Kelly L. Klokow">
+        <div class="tc-b"><h3>Kelly L. Klokow</h3><p class="role">Partner · Family Law &amp; Bankruptcy</p>
+        <p>Eleven years in the family-law field, focusing on divorce, custody, and support. Personal, determined representation across Northern California.</p>
+        <div class="btn-row center" style="margin-top:14px"><a class="btn btn--gold" href="team/kelly-l-klokow.html">Read Full Bio</a></div></div></div>
+      <div class="team-card"><img src="assets/attorney-david.jpg" alt="David Tafaoimalo">
+        <div class="tc-b"><h3>David Tafaoimalo</h3><p class="role">Senior Bankruptcy Paralegal</p>
+        <p>Supports clients through every step of the bankruptcy process — keeping cases organized, on schedule, and moving forward.</p>
+        <div class="btn-row center" style="margin-top:14px"><a class="btn btn--gold" href="team/david-tafaoimalo.html">Read Full Bio</a></div></div></div>
     </div>
-    <img class="attorney-img" src="assets/attorney-brette.jpg" alt="Brette L. Evans">
   </div>
 </section>
 
