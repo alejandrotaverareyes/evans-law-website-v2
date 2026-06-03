@@ -289,6 +289,8 @@ p{margin:0 0 1rem}
 .pa-side a{display:block;padding:10px 14px;color:#cdd5e0;font-family:var(--head);text-transform:uppercase;
   letter-spacing:.03em;font-size:.82rem;border-left:3px solid transparent;border-radius:0 4px 4px 0}
 .pa-side a:hover{background:var(--navy-2);color:var(--gold-bright);border-left-color:var(--gold)}
+.pa-side a.active{background:var(--navy-2);color:var(--gold-bright);border-left-color:var(--gold)}
+.pa-side .pa-side-all{color:var(--gold);border-bottom:1px solid var(--line);margin-bottom:6px;padding-bottom:10px}
 .pa-block{scroll-margin-top:84px;padding:34px 0;border-top:1px solid var(--line)}
 .pa-block:first-child{border-top:0;padding-top:0}
 .pa-block h2{color:#fff;font-size:1.7rem;margin-bottom:.3rem}
