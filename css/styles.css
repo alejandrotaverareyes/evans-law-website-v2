@@ -54,8 +54,10 @@ p{margin:0 0 1rem}
 .topbar .tb-right{margin-left:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .topbar .tb-call{color:#cfd6e0}
 .topbar .tb-call b{color:var(--gold-bright);font-family:var(--head);font-size:1.05rem;letter-spacing:.02em}
-.topbar .tb-social a{color:#cfd6e0;font-family:var(--head);font-weight:600;margin-left:8px}
+.topbar .tb-social{display:inline-flex;align-items:center;gap:10px}
+.topbar .tb-social a{color:#cfd6e0;display:inline-flex;align-items:center;margin-left:4px}
 .topbar .tb-social a:hover{color:var(--gold)}
+.topbar .tb-social svg{width:16px;height:16px;display:block;fill:currentColor}
 
 /* ===== Main nav ===== */
 .mainnav{background:var(--navy-2);position:sticky;top:0;z-index:60;border-bottom:2px solid var(--gold)}
